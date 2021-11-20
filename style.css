@@ -13,7 +13,7 @@ body{
 .navBar{
     position:relative;
     width:100%;
-    height:14vh;
+    height:max(14vh,4.5rem);
     background-color: #fff;
 }
 .navBar--items{
@@ -79,11 +79,15 @@ body{
 .navBar__ul--li{
     margin:0;
 }
-
+.navBar__ul--li_a{
+    color:#000;
+    text-decoration:none;
+}
 .cart-img{
     width:2.3rem;
     margin-right:1.3rem;
 }
 .page-title{
     font-family: 'Comforter Brush', cursive;
+    font-size:1.7em;
 }
