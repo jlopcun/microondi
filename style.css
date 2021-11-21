@@ -124,27 +124,37 @@ body.menuOpened{
 }
 .product{
     width:18rem;
+    height:35rem;
     margin:2rem;
     background-color:var(--prouctBgcolor);
     padding:.5rem;
     font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    flex-flow:column nowrap;
+
 }
 .product-img{
     width:100%;
+    flex-grow:1;
 }
 .product-title{
     text-align:center;
     font-size:.9em;
+    flex-grow:1;
 }
 .product-desc{
     text-align:center;
     font-size:.8em;
+    flex-grow:1;
 }
 .product-purchase{
     width:100%;
     display:flex;
     justify-content:space-around;
     align-items: center;
+    flex-grow:1;
 }
 .product-buybtn{
     padding:.4rem;
