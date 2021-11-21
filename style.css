@@ -1,3 +1,7 @@
+:root{
+    --pageMainColor:#fff;
+    --prouctBgcolor:#eee;
+}
 *,*::after,*::before{
     box-sizing:border-box;
 }
@@ -7,14 +11,47 @@ body{
     min-height:100vh;
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #aaa;
+    background-color:var(--pageMainColor);
+
 }
 
+.navBar__button.opened >.navBar__button--line1{
+    transform:rotate(45deg) translateY(5px);
+}
+.navBar__button.opened >.navBar__button--line2{
+    position:absolute;
+    transform:translateX(-5rem);
+}
+.navBar__button.opened >.navBar__button--line3{
+    width:50px;
+    transform:rotate(-45deg) translateY(-5px);
+}
+.pageContent.menuOpened{
+    filter:blur(.5rem);
+}
+.navBar__ul.opened{
+    transform:translateX(0);
+}
+body.menuOpened{
+    overflow:hidden;
+}
+.pageContent{
+    width:100%;
+    height:100%;
+    margin:0;
+    margin-top:max(14vh,4.5rem);
+}
+.page-icon{
+    width:2.3rem;
+    cursor:pointer;
+}
 .navBar{
-    position:relative;
+    position:fixed;
+    top:0;
     width:100%;
     height:max(14vh,4.5rem);
-    background-color: #fff;
+    background-color:var(--pageMainColor);
+    z-index:10;
 }
 .navBar--items{
     width:100%;
@@ -26,20 +63,9 @@ body{
 }
 .navBar__button{
     width:50px;
-    padding:1.3rem 1rem;
+    margin:1.3rem 1rem;
     cursor:pointer;
-    z-index:10;
-}
-.navBar__button.opened >.navBar__button--line1{
-    transform:rotate(45deg) translateY(5px);
-}
-.navBar__button.opened >.navBar__button--line2{
-    position:absolute;
-    transform:translateX(-5rem);
-}
-.navBar__button.opened >.navBar__button--line3{
-    width:50px;
-    transform:rotate(-45deg) translateY(-5px);
+    z-index:30;
 }
 .navBar__button--line{
     height:3px;
@@ -67,15 +93,13 @@ body{
     flex-flow:column wrap;
     margin:0;
     padding:0;
-    background-color: #fff;
+    background-color: var(--pageMainColor);
     list-style:none;
     transform:translateX(-100%);
     transition:transform .3s;
-    
+    z-index:20;
 }
-.navBar__ul.opened{
-    transform:translateX(0);
-}
+
 .navBar__ul--li{
     margin:0;
 }
@@ -84,10 +108,33 @@ body{
     text-decoration:none;
 }
 .cart-img{
-    width:2.3rem;
     margin-right:1.3rem;
 }
 .page-title{
     font-family: 'Comforter Brush', cursive;
     font-size:1.7em;
+}
+
+.productsContainer{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow:row wrap;
+}
+.product{
+    width:18rem;
+    margin:2rem;
+    background-color:var(--prouctBgcolor);
+    padding:.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.product-img{
+    width:100%;
+}
+.product-title{
+    text-align:center;
+}
+.product-desc{
+    text-align:center;
 }
