@@ -134,7 +134,29 @@ body.menuOpened{
 }
 .product-title{
     text-align:center;
+    font-size:.9em;
 }
 .product-desc{
     text-align:center;
+    font-size:.8em;
+}
+.product-purchase{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.product-buybtn{
+    padding:.4rem;
+    background-color: #444;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+.product-buybtn:hover{
+    background-color:#222;
+}
+.product-price{
+    font-weight: bold;
+    font-size:1.3em;
 }
