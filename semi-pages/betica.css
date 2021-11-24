@@ -1,6 +1,6 @@
 :root{
     --pageMainColor:#fff;
-    --prouctBgcolor:rgba(230 230 230 / .5);
+    --prouctBgcolor:#eee;
 }
 *,*::after,*::before{
     box-sizing:border-box;
@@ -126,16 +126,14 @@ body.menuOpened{
     width:18rem;
     height:35rem;
     margin:2rem;
+    background-color:var(--prouctBgcolor);
     padding:.5rem;
+    font-family:Arial, Helvetica, sans-serif;
     display:flex;
     justify-content:flex-end;
     align-items:center;
     flex-flow:column nowrap;
-    background-color:var(--prouctBgcolor);
-    font-family:Arial, Helvetica, sans-serif;
-    -webkit-backdrop-filter: blur(60%);
-    backdrop-filter: blur(60%);
-    border-radius:10px;
+
 }
 .product-img{
     width:100%;
