@@ -13,19 +13,26 @@ $navBar__button.addEventListener('click',()=>{
     $body.classList.toggle('menuOpened');
     $pageContent.classList.toggle('menuOpened');
 })
-
+const ThemeLight = ()=>{
+    RootStyles.setProperty('--pageMainColor','#fff');
+    (window.location.toString().includes('semi-pages'))
+    ?$darkLight.src="../assets-microondi/sun-svgrepo-com.svg"
+    :$darkLight.src="assets-microondi/sun-svgrepo-com.svg"
+    localStorage.setItem('mode','sun');
+}
+const ThemeDark =()=>{
+    RootStyles.setProperty('--pageMainColor','#777');
+        (window.location.toString().includes('semi-pages'))
+        ?$darkLight.src="../assets-microondi/moon-svgrepo-com.svg"
+        :$darkLight.src="assets-microondi/moon-svgrepo-com.svg"
+        localStorage.setItem('mode','moon');
+}
 $darkLight.addEventListener('click',(e)=>{
     if(e.target.src.includes('sun')){
-        RootStyles.setProperty('--pageMainColor','#777');
-        (window.location.toString().includes('semi-pages'))
-        ?e.target.src="../assets-microondi/moon-svgrepo-com.svg"
-        :e.target.src="assets-microondi/moon-svgrepo-com.svg"
+       ThemeDark(e);
     }
     else{
-        RootStyles.setProperty('--pageMainColor','#fff');
-        (window.location.toString().includes('semi-pages'))
-        ?e.target.src="../assets-microondi/sun-svgrepo-com.svg"
-        :e.target.src="assets-microondi/sun-svgrepo-com.svg"
+       ThemeLight(e);
     }
 })
 
@@ -33,3 +40,11 @@ $buybtn.addEventListener('click',()=>{
     alert('cisko que sepas que eres un grande , sabía que ivas a clickar en comprar ;)')
 })
 
+window.addEventListener('load',()=>{
+    if(localStorage.getItem('mode')==='sun'){
+        ThemeLight();
+    }
+    else{
+        ThemeDark();
+    }
+})

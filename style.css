@@ -1,6 +1,5 @@
 :root{
     --pageMainColor:#fff;
-    --prouctBgcolor:rgba(230 230 230 / .5);
 }
 *,*::after,*::before{
     box-sizing:border-box;
@@ -131,11 +130,12 @@ body.menuOpened{
     justify-content:flex-end;
     align-items:center;
     flex-flow:column nowrap;
-    background-color:var(--prouctBgcolor);
     font-family:Arial, Helvetica, sans-serif;
-    -webkit-backdrop-filter: blur(60%);
-    backdrop-filter: blur(60%);
-    border-radius:10px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(252,248,251,1) 0%, rgba(108,125,129,1) 100%);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12.5px );
+    -webkit-backdrop-filter: blur( 12.5px );
+    border-radius: 10px;
 }
 .product-img{
     width:100%;
@@ -150,6 +150,8 @@ body.menuOpened{
     text-align:center;
     font-size:.8em;
     flex-grow:1;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
 }
 .product-purchase{
     width:100%;
