@@ -5,7 +5,6 @@ const $navBar__ul = $id('navBar__ul');
 const $navBar__button = $id('navBar__button');
 const $darkLight = $id('darkLight');
 const $pageContent = $id('pageContent');
-const $buybtn = $id('buybtn');
 const RootStyles = document.documentElement.style;
 $navBar__button.addEventListener('click',()=>{
     $navBar__button.classList.toggle('opened');
@@ -36,9 +35,7 @@ $darkLight.addEventListener('click',(e)=>{
     }
 })
 
-$buybtn.addEventListener('click',()=>{
-    alert('cisko que sepas que eres un grande , sabía que ivas a clickar en comprar ;)')
-})
+
 
 window.addEventListener('load',()=>{
     if(localStorage.getItem('mode')==='sun'){
