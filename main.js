@@ -5,6 +5,7 @@ const $navBar__ul = $id('navBar__ul');
 const $navBar__button = $id('navBar__button');
 const $darkLight = $id('darkLight');
 const $pageContent = $id('pageContent');
+const $loader = $id('loader');
 const RootStyles = document.documentElement.style;
 $navBar__button.addEventListener('click',()=>{
     $navBar__button.classList.toggle('opened');
@@ -45,3 +46,6 @@ window.addEventListener('load',()=>{
         ThemeDark();
     }
 })
+setTimeout(()=>{
+    $loader.classList.add('loader-load');
+},1000)

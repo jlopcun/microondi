@@ -131,6 +131,7 @@ body{
     justify-content:center;
     align-items:center;
     flex-flow:row wrap;
+    background-color: var(--pageMainColor);
 }
 .product{
     width:18rem;
@@ -186,4 +187,19 @@ body{
     font-size:1.3em;
 }
 
+.loader{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    z-index:999999;
+}
+.loader-load{
+    display:none;
+}
+.loader-img{
+    width:100%;
+    height:100%;
+    display:block;
 
+}
