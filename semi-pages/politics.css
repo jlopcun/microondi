@@ -1,0 +1,19 @@
+*,*::after,*::before{
+    box-sizing:border-box;
+}
+body{
+    max-width:100vw;
+    min-height:100vh;
+    background-color: #bba;
+}
+.title{
+    text-align:center;
+    font-family: 'Comforter Brush', cursive;
+}
+.politicas_de_empresa{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.back{
+    display:inline-block;
+    margin-top:2rem;
+}
