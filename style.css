@@ -257,13 +257,43 @@ body{
     color:#070e6e5e;
 }
 
-.imgCarrousel{
+.Carrousel{
+    position:relative;
     width:100%;
-    height:50vh;
+    height:100vw;
     margin-top:max(17vh,6rem);
-    background-color: grey;
+}
+.Carrousel__img{
+    width:100%;
+    height:100%;
+}
+.Carrouselmarker{
+    position:absolute;
+    bottom:2rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.Carrouselmarker__point{
+    width:10px;
+    height:10px;
+    margin:.5rem;
+    border:.3px solid #000;
+    border-radius:50%;
+    background-color: var(--pagesemiLightRed);
+}
+.showing{
+    background-color:var(--pageSemiDarkRed);
 }
 @media  screen and (min-width:768px) {
+    .Carrousel{
+        margin-top:0;
+    }
+    .navBar{
+        position:sticky;
+        top:0;
+    }
     .navBar__button{
         display:none;
     }
@@ -276,6 +306,11 @@ body{
         transform:translateX(0);
         z-index:1;
         
+    }
+    .navBar__ul--li{
+        padding:.5rem;
+        border-radius:10px;
+        transition:background .5s;
     }
     .navBar--items{
         position:absolute;
@@ -297,5 +332,12 @@ body{
         width:3px;
         height:100%;
         background-color: #000;
+    }
+
+    .navBar__ul--li:hover{
+        background-color:var(--pagesemiLightRed);
+    }
+    .Carrousel{
+        height:60vh;
     }
 }
