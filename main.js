@@ -54,7 +54,6 @@ const updateCart = () =>{
         thisProduct.querySelector('.product-title').textContent=productObj.name;
         thisProduct.querySelector('.product-desc').textContent=productObj.desc;
         thisProduct.querySelector('.product-price').textContent=productObj.price;
-        // thisProduct.querySelector('.product').dataset.index = localCart.indexOf(productObj);
         fragment.append(thisProduct);
         $cartProducts.append(fragment);
 })
