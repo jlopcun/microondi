@@ -28,7 +28,39 @@
     <title>CART</title>
 </head>
 <body>
-    <h2>COMING SOON</h2>
-    <p>maldito consumista... ya estás pensando en comprar</p>
+    <nav class="navBar" id="navBar">
+       <div class="navBar--items">
+        <div class="navBar__button" id="navBar__button">
+            <div class="navBar__button--line navBar__button--line1"></div>
+            <div class="navBar__button--line navBar__button--line2"></div>
+            <div class="navBar__button--line navBar__button--line3"></div>
+        </div>
+       </div>
+        <ul class="navBar__ul" id="navBar__ul">
+            <li class="navBar__ul--li"><a class="navBar__ul--li_a" href="gamaBettica.html">Gama béttica</a></li>
+            <li class="navBar__ul--li"><a class="navBar__ul--li_a" href="gama-grande.html">Gama grande</a></li>
+            <li class="navBar__ul--li"><a class="navBar__ul--li_a" href="gama-frifayer.html">Gama fri fayer</a></li>
+            <li class="navBar__ul--li"><a class="navBar__ul--li_a" href="../">Página principal</a></li>
+            <li class="navBar__ul--li"><a class="navBar__ul--li_a" href="https://jlopcun.netlify.app" target="_blank">author</a></li>
+            <!-- <li class="navBar__ul--li"><img src="assets-microondi/sun-svgrepo-com.svg" alt="dark/light mode icon" class="page-icon" id="darkLight"></li> -->
+        </ul>
+    </nav>
+    <div class="pageContent" id="pageContent">
+        <div class="productsContainer" id="cartProducts">
+            
+        </div>
+    </div>
+    <template id="productTemplate">
+        <div class="product" data-index="">
+            <img class="product-img" alt="wished-product">
+            <h2 class="product-title"></h2>
+            <p class="product-desc"></p>
+            <div class="product-purchase">
+                <p class="product-price"></p>
+                <div class="product-buybtn"><img src="../assets-microondi/cross-svgrepo-com.svg" alt="shopping-cart" class="buybtncart"></div>
+            </div>
+        </div>
+    </template>
+    <script src="../main.js"></script>
 </body>
 </html>

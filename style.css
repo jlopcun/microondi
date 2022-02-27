@@ -1,7 +1,7 @@
 
 .product:hover>.product-img{
     position:relative;
-   transform:scale(120%);
+   transform:scale(110%);
 }
 .navBar__button.opened >.navBar__button--line1{
     transform:rotate(45deg) translateY(5px);
@@ -137,6 +137,10 @@ body{
     z-index:10;
 }
 
+.page-title:hover{
+    cursor:default;
+}
+
 .productsContainer{
     width:100%;
     display:flex;
@@ -154,20 +158,26 @@ body{
     justify-content:space-between;
     align-items:center;
     flex-flow:column nowrap;
+    transform:translateY(-10%);
     font-family:Arial, Helvetica, sans-serif;
     background:var(--pageSemiDarkRed);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 12.5px );
-    -webkit-backdrop-filter: blur( 12.5px );
+    opacity:0;
     border-radius: 10px;
-    transition:background-color .5s;
+    transition:background-color .5s,opacity .5s,transform .5s;
+}
+
+.productShow{
+    transform:translateY(0);
+    opacity:1;
 }
 
 .product-img{
     width:100%;
+    height:40%;
     flex-grow:1;
     transition:transform .4s;
-    margin-top:-15%;
+    margin-top:-25%;
 }
 
 .product-title{
@@ -204,17 +214,18 @@ body{
     cursor:pointer;
 }
 .product-buybtn::after{
-    content:"add to cart";
+    content:"change cart";
     position:absolute;
     top:-25%;
     left:10%;
     display:inline-block;
-    width:5rem;
+    width:6rem;
     padding-bottom:1rem;
     background-color:var(--pageMainColor);
     clip-path: polygon(0 0 , 100% 0 , 100% 50% , 75% 50%, 50% 75% , 50% 50% , 0 50%);
     opacity:0;
     transition:opacity .3s;
+    pointer-events:none;
 }
 .product-buybtn:hover::after{
     opacity:1;
@@ -286,6 +297,7 @@ body{
 .showing{
     background-color:var(--pageSemiDarkRed);
 }
+
 @media  screen and (min-width:768px) {
     .Carrousel{
         margin-top:0;
@@ -310,7 +322,7 @@ body{
     .navBar__ul--li{
         padding:.5rem;
         border-radius:10px;
-        transition:background .5s;
+        transition:background .5s,transform .3s;
     }
     .navBar--items{
         position:absolute;
@@ -332,10 +344,14 @@ body{
         width:3px;
         height:100%;
         background-color: #000;
+        transition:transform.3s;
     }
 
     .navBar__ul--li:hover{
-        background-color:var(--pagesemiLightRed);
+        transform:translateY(-5px);
+    }
+    .navBar__ul--li:hover::after{
+        transform:translateY(-5px);
     }
     .Carrousel{
         height:60vh;
